@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     triggers {
-        scm '*/5 * * * *' // Poll SCM every 5 minutes (for testing purposes)
+        pollSCM '*/5 * * * *' // Poll SCM every 5 minutes (for testing purposes)
     }
 
     stages {
