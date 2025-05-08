@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     triggers {
-        pollSCM '*/5 * * * *' // Poll SCM every 5 minutes (for testing purposes)
+        cron '*/5 * * * *' // Trigger every 5 seconds (use with caution!)
     }
 
     stages {
-        stage('Trigger Check') {
+        stage('Hello') {
             steps {
-                echo 'Pipeline triggered by a Git push (or SCM polling)!'
+                echo 'hello world'
             }
         }
     }
